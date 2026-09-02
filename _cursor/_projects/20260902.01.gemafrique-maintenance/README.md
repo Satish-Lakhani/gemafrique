@@ -17,19 +17,20 @@ Gem Afrique’s WordPress host was cancelled; the domain is still registered at 
 
 ## Success Criteria
 
-- [ ] Page matches Daizy’s spec at 360 / 768 / 1024
-- [ ] Contrast pairings meet WCAG 2.2 AA (ratios on file)
-- [ ] Public GitHub repo `Satish-Lakhani/gemafrique` serves Pages
-- [ ] Custom domain `gemafrique.com` configured in Pages **before** DNS
+- [x] Contrast pairings meet WCAG 2.2 AA (ratios on file)
+- [x] Public GitHub repo `Satish-Lakhani/gemafrique` serves Pages
+- [x] Custom domain `gemafrique.com` configured in Pages **before** DNS
+- [ ] Page checked at 360 / 768 / 1024 on a real device (no browser MCP this session)
 - [ ] GoDaddy A/AAAA/www updated; MX/TXT untouched
-- [ ] `https://gemafrique.com` loads; `https://satish-lakhani.github.io` still serves the personal site
+- [x] `https://satish-lakhani.github.io` still 200 after Pages enable (2026-09-02)
+- [ ] `https://gemafrique.com` loads over HTTPS
 
 ## Progress
 
 - [x] Project initialized
 - [x] Design spec + ADR
-- [ ] Static page built and locally verified
-- [ ] GitHub Pages enabled
+- [x] Static page built and locally verified
+- [x] GitHub Pages enabled (custom domain attached; HTTPS not enforced yet)
 - [ ] GoDaddy DNS
 - [ ] Live HTTPS verified
 - [ ] Project completed
