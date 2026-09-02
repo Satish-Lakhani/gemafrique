@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Gem Afrique">
-  <rect width="32" height="32" fill="#12100E"/>
-  <path fill="#C4A574" d="M16 4.5 26.5 14.2 16 27.5 5.5 14.2 16 4.5z"/>
-  <path fill="#12100E" fill-opacity="0.35" d="M16 4.5 16 27.5 5.5 14.2 16 4.5z"/>
-  <path fill="none" stroke="#F4EDE0" stroke-opacity="0.35" stroke-width="0.6" d="M16 4.5 26.5 14.2 16 27.5 5.5 14.2Z M5.5 14.2h21"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#1A0610"/>
+  <path fill="#3D1F6B" d="M6 12 16 28 16 14z"/>
+  <path fill="#6B3FA0" d="M26 12 16 28 16 14z"/>
+  <path fill="#F4E4B4" d="M16 4 26 12 16 14 6 12z"/>
+  <path fill="#C9A227" d="M6 12 16 4 16 14z"/>
 </svg>

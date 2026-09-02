@@ -2,12 +2,14 @@
 title: Gem Afrique maintenance holding page — design spec
 author: daizy-bloom-designer
 date: "2026-09-02"
-status: approved-direction
+status: revised-2026-09-02-royal
 ---
 
 # Design spec — Maintenance Alert
 
 Fiona builds from this. Do not invent palette, type, or layout. Tokens are CSS custom properties in `styles.css`.
+
+**Revision 2026-09-02 (Satish):** v1 quiet-luxury was too flat and the gem mark too small. Direction is now **royal jewelry-box** — velvet burgundy, faceted gem mark, gold filigree card, WhatsApp-green CTA.
 
 ## Problem
 
@@ -18,12 +20,12 @@ A visitor hitting gemafrique.com currently gets a dead host. They need to know t
 | Finding | Source + date | Verdict | Why here |
 |---|---|---|---|
 | High-ticket jewelry sites put a human line (WhatsApp / “talk to an expert”) ahead of forms | [H&CO Lead Bridge](https://www.itshco.com/blog/high-end-lead-bridge-luxury-website-conversion), read 2026-09-02 | **Adopt** | Matches the brief; we have no backend |
-| Quiet-luxury jewelry: dark surface, gold type, restraint | Current jewelry waitlist/coming-soon patterns, read 2026-09-02 | **Adopt** | Brand sells tanzanite/diamonds (archived gemafrique.com copy) |
-| WCAG 2.2 AA: 4.5:1 normal text, 3:1 large text and UI | [W3C 1.4.3](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum), 2026-09-02 | **Adopt** | Floor, not a stretch |
-| Full-bleed video, waitlist email capture, maximalist neon | 2026 jewelry landing templates | **Ignore** | No assets, no backend, wrong brand |
-| WhatsApp-green as the only cue on the button | Common chat-widget fashion | **Ignore** | Meaning must not be hue-only; icon + words |
+| Heritage jewelry palettes: burgundy/navy + warm gold | [Aurelia & Co.](https://theclientcollective.com/work/jewelry-ecommerce-website), 2026-09-02 | **Adopt** | User asked for royal jewelry, not flat charcoal |
+| WhatsApp CTA green `#25D366` | [Refero / WhatsApp.com](https://styles.refero.design/style/a643f3a0-6c99-4076-b03f-6f0691c21bd0), 2026-09-02 | **Adopt hue** | User asked for a real WhatsApp button |
+| White type on `#25D366` | Computed 1.98:1, 2026-09-02 | **Ignore** | Fails WCAG; dark `#111B21` on that green is 8.80:1 |
+| WCAG 2.2 AA | [W3C 1.4.3](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum) | **Adopt** | Floor |
 
-Direction **A (quiet luxury)** chosen by Satish 2026-09-02. Rejected: daylight boutique; system-minimal.
+Direction **revised to royal jewelry-box** by Satish 2026-09-02 after rejecting v1 quiet-luxury.
 
 ## Copy
 
@@ -34,9 +36,10 @@ Spelling fix approved in the plan: “Maintanance” → “Maintenance”. Mean
 | `<title>` / `og:title` | Maintenance Alert · Gem Afrique |
 | Brand | Gem Afrique |
 | `h1` | Maintenance Alert |
-| Subtitle | We are updating our website, we will soon be back with the new look and feel. |
+| Subtitle | We are revamping our website, we will soon be back with new look and feel. |
+| Assistance (above CTA) | If you need any urgent assistance, please reach out on WhatsApp. |
 | CTA | Message on WhatsApp |
-| Body | If you need any urgent assistance, please reach out on WhatsApp, on this number — +27 62 050 6479 |
+| Phone on page | Removed — number lives only in the `wa.me` link |
 | `href` | `https://wa.me/27620506479` (opens in a new tab, `rel="noopener noreferrer"`) |
 
 No store address. No extra marketing. Long translated strings wrap; they do not truncate.
@@ -47,7 +50,7 @@ Named by role. Computed contrast vs `--color-surface` unless noted. Formula: WCA
 
 | Token | Value | Pairing | Ratio | Bar |
 |---|---|---|---|---|
-| `--color-surface` | `#12100E` | — | — | page background |
+| `--color-surface` | `#1A0610` | — | velvet wine | page background |
 | `--color-surface-raised` | `#1C1A17` | champagne text | 14.91:1 | unused on v1 except if a card is needed |
 | `--color-text` | `#F4EDE0` | surface | **16.31:1** | AA AAA body |
 | `--color-text-muted` | `#C9BBA8` | surface | **10.09:1** | AA AAA body |
