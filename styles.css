@@ -98,12 +98,10 @@ body {
   position: absolute;
   width: var(--w, 2.75rem);
   height: calc(var(--w, 2.75rem) * 1.35);
-  background: linear-gradient(
-    145deg,
-    var(--color-gold) 0%,
-    var(--color-ruby) 42%,
-    var(--color-tanzanite) 100%
-  );
+  background: linear-gradient(145deg,
+      var(--color-gold) 0%,
+      var(--color-ruby) 42%,
+      var(--color-tanzanite) 100%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   opacity: 0.28;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
@@ -114,12 +112,10 @@ body {
 }
 
 .facet:nth-child(odd) {
-  background: linear-gradient(
-    160deg,
-    var(--color-gold-highlight) 0%,
-    var(--color-gold-deep) 38%,
-    var(--color-velvet) 100%
-  );
+  background: linear-gradient(160deg,
+      var(--color-gold-highlight) 0%,
+      var(--color-gold-deep) 38%,
+      var(--color-velvet) 100%);
 }
 
 .page {
@@ -141,12 +137,11 @@ body {
   max-width: var(--content-max);
   padding: var(--space-6) var(--space-4);
   text-align: center;
-  background: linear-gradient(
-    180deg,
-    rgba(42, 10, 22, 0.72) 0%,
-    rgba(13, 8, 24, 0.78) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(42, 10, 22, 0.72) 0%,
+      rgba(13, 8, 24, 0.78) 100%);
   border: 1px solid rgba(224, 192, 112, 0.45);
+  border-radius: 1.5rem;
   box-shadow:
     0 0 0 6px rgba(26, 6, 16, 0.55),
     0 0 0 7px rgba(224, 192, 112, 0.28),
@@ -175,12 +170,10 @@ body {
   height: 1px;
   margin: var(--space-4) 0 var(--space-5);
   border: 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--color-gold),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      var(--color-gold),
+      transparent);
 }
 
 .headline {
@@ -250,15 +243,18 @@ body {
 }
 
 @keyframes assemble {
+
   0%,
   100% {
     transform: translate3d(0, 18px, 0) rotate(0deg) scale(0.86);
     opacity: 0.12;
   }
+
   40% {
     transform: translate3d(0, 0, 0) rotate(8deg) scale(1);
     opacity: 0.38;
   }
+
   70% {
     transform: translate3d(4px, -10px, 0) rotate(-4deg) scale(1.05);
     opacity: 0.3;

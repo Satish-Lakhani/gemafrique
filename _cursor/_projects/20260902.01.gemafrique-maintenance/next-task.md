@@ -15,7 +15,7 @@
 ## Project
 
 - **Description**: Temporary maintenance holding page for gemafrique.com on a GitHub Pages project repo.
-- **Goal**: `https://gemafrique.com` serves the quiet-luxury page with WhatsApp CTA; Microsoft 365 email still works; personal `satish-lakhani.github.io` untouched.
+- **Goal**: `https://gemafrique.com` serves the **approved royal jewelry-box** holding page with WhatsApp CTA; Microsoft 365 email still works; personal `satish-lakhani.github.io` untouched.
 - **Tech stack**: static HTML/CSS, GitHub Pages, GoDaddy DNS
 - **Components**: `/Volumes/Others/Work/c2b/ai/gemafrique`
 
@@ -33,28 +33,34 @@
 ## Current Status
 
 - **Created**: 2026-09-02
-- **Last Activity**: 2026-09-02 (Session 1, jarvis-stone-architect + daizy-bloom-designer + fiona-vale-frontend in one chat) — Page is built and pushed. GitHub Pages is live with the custom domain *configured* but GoDaddy still points at the cancelled host, so gemafrique.com is still dead until Satish updates A/AAAA/www.
+- **Last Activity**: 2026-09-02 16:51 SAST (Session 1 checkpoint) — Royal jewelry-box page is approved and pushed (`66a23aa`). Custom domain is already set on GitHub Pages. **Next chat is DNS only:** point gemafrique.com at GitHub at GoDaddy, then Enforce HTTPS. Do not restyle.
 - **Status**: Active 🟢
 
 **Current step:**
 - ✅ Project initialized (2026-09-02)
 - ✅ Design spec + ADR-001 + Fiona handoff
-- ✅ Static page (index, styles, 404, CNAME) — local 200 on :4173; contrast computed
-- ✅ Public repo + Pages from `main` / root + CNAME `gemafrique.com`
-- ✅ Personal GitHub Pages still 200
-- 🔴 GoDaddy DNS not changed — unblock: Satish logs into GoDaddy and applies the runbook table (A/AAAA/www only)
-- 🔵 Next: Satish runs GoDaddy DNS from `docs/github-pages-and-dns-runbook.md`, then Enforce HTTPS in repo Settings → Pages
+- ✅ Static page on GitHub Pages project repo `Satish-Lakhani/gemafrique` (not the user site)
+- ✅ Satish approved royal jewelry-box restyle (larger gem, WhatsApp green `#25D366` + dark label, copy reorder, gem-block animation)
+- ✅ Personal GitHub Pages still 200 (`https://satish-lakhani.github.io/`)
+- 🔴 GoDaddy DNS not changed — apex `A` still `160.153.0.172`; MX still Outlook
+- 🔵 Next: walk Satish through GoDaddy A/AAAA/www from the runbook; then Enforce HTTPS; verify `https://gemafrique.com`
 
-### ✅ COMPLETED: Holding page build + GitHub Pages (2026-09-02)
+### ⏸ CHECKPOINT (2026-09-02 16:51 SAST)
 
-**Delivered:** Quiet-luxury one-pager at `/Volumes/Others/Work/c2b/ai/gemafrique`; public repo; Pages built.  
-**Decisions:** Project repo (not user site); quiet luxury; spelling “Maintenance”.  
-**Validation:** `curl` local 200; `gh` Pages `status=built`; personal site 200; MX unchanged. gemafrique.com HTTPS **not** verified — DNS still old.  
-**Files:** `index.html` `styles.css` `404.html` `CNAME` `favicon.svg` + `_cursor/` docs.  
-**Changelog:** `changelogs/001-holding-page-build.md`
+- **Exactly where work stopped:** design approved. GitHub Pages `cname=gemafrique.com`, `https_enforced=false`. No GoDaddy clicks yet.
+- **In-flight:** uncommitted local edit in `styles.css` — `.jewel-card { border-radius: 1.5rem; }` plus formatting. Ask Satish whether to commit/push before DNS.
+- **Rejected:** v1 quiet-luxury (too flat, gem too small). White type on WhatsApp green (1.98:1).
+- **Do not:** touch MX/TXT/SPF; rename anything to `*.github.io`; redesign the page.
+- **First action for the next chat:** Read `docs/github-pages-and-dns-runbook.md`, confirm live `dig gemafrique.com A` still shows `160.153.0.172`, then hand Satish the GoDaddy table to apply.
+
+### ✅ COMPLETED: Royal restyle (2026-09-02)
+
+**Delivered:** Velvet burgundy jewelry-box page; faceted `mark.svg`; WhatsApp-green CTA; assistance line above the button; “revamping” copy.  
+**HEAD:** `66a23aa`  
+**Changelog:** `changelogs/001-holding-page-build.md` (build) · `changelogs/002-checkpoint-dns-handoff.md` (this hop)
 
 ## Objectives for Next Session
 
-- **A (Recommended):** Apply the GoDaddy table, wait for propagation, tick Enforce HTTPS, confirm `https://gemafrique.com` and WhatsApp.
-- **B:** Hand the live page to Reva Hawke for a design/a11y review before DNS.
-- **C:** Transfer the repo to the friend’s GitHub account after DNS is stable.
+- **A (Recommended):** Apply GoDaddy A/AAAA/www from the runbook, wait for propagation, tick Enforce HTTPS, confirm `https://gemafrique.com` and that `https://satish-lakhani.github.io/` is still 200.
+- **B:** Commit/push the uncommitted `border-radius` first, then do A.
+- **C:** After HTTPS is live, optional Reva review.
