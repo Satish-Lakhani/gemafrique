@@ -1,0 +1,227 @@
+:root {
+  --color-surface: #12100e;
+  --color-surface-raised: #1c1a17;
+  --color-text: #f4ede0;
+  --color-text-muted: #c9bba8;
+  --color-accent: #c4a574;
+  --color-cta-fill: #c4a574;
+  --color-cta-text: #12100e;
+  --color-cta-hover: #4a3d6b;
+  --color-cta-hover-text: #f4ede0;
+  --font-display: "Cormorant Garamond", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-body: "Source Sans 3", "Source Sans Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --space-8: 6rem;
+  --radius-cta: 999px;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 4px;
+  --content-max: 36rem;
+  --cta-max: 20rem;
+  --hairline-width: 4rem;
+  --page-pad-x: 1.5rem;
+  --page-pad-y: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-3);
+  top: var(--space-3);
+  z-index: 10;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-cta-fill);
+  color: var(--color-cta-text);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-cta);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus-visible {
+  clip-path: none;
+  clip: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: var(--page-pad-y) var(--page-pad-x);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: var(--content-max);
+  text-align: center;
+}
+
+.gem {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: var(--space-4);
+  color: var(--color-accent);
+}
+
+.brand {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.rule {
+  width: var(--hairline-width);
+  height: 1px;
+  margin: var(--space-4) 0 var(--space-5);
+  border: 0;
+  background: var(--color-accent);
+}
+
+.headline {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 8vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.lede {
+  margin: 0 0 var(--space-6);
+  max-width: 28rem;
+  font-size: clamp(1.125rem, 2.4vw, 1.25rem);
+  color: var(--color-text-muted);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 3rem;
+  width: 100%;
+  max-width: var(--cta-max);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--color-cta-text);
+  background: var(--color-cta-fill);
+  border-radius: var(--radius-cta);
+}
+
+.cta-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  color: var(--color-cta-hover-text);
+  background: var(--color-cta-hover);
+}
+
+.cta:focus-visible,
+.phone:focus-visible,
+.skip-link:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-accent);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.cta:active {
+  transform: translateY(1px);
+}
+
+.contact {
+  margin: var(--space-5) 0 0;
+  max-width: 28rem;
+  color: var(--color-text-muted);
+}
+
+.phone {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.phone:hover,
+.phone:focus-visible {
+  color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-pad-x: 2rem;
+    --page-pad-y: 3rem;
+    --hairline-width: 6rem;
+  }
+
+  .cta {
+    width: auto;
+    min-width: 16rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --page-pad-x: 3rem;
+    --page-pad-y: 4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta:active {
+    transform: none;
+  }
+}

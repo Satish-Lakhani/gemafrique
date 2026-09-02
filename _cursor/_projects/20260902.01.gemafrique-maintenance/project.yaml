@@ -1,0 +1,14 @@
+description: "Temporary maintenance holding page for gemafrique.com while the cancelled WordPress site is replaced. Static HTML on a GitHub Pages project repo with the custom domain attached; personal username.github.io is untouched."
+goal: "https://gemafrique.com serves a quiet-luxury maintenance page with a WhatsApp CTA, HTTPS on, Microsoft 365 email still working."
+owner: jarvis-stone-architect
+type: infrastructure
+timeline: single-session-design + single-session-build + human-dns
+tech_stack: "static HTML/CSS, GitHub Pages, GoDaddy DNS"
+components:
+  - "gemafrique/index.html styles.css 404.html CNAME (application — Fiona Vale)"
+  - "gemafrique/_cursor (design spec, ADR, runbook — Jarvis Stone / Daizy Bloom)"
+tags:
+  - gemafrique
+  - github-pages
+  - holding-page
+  - dns
